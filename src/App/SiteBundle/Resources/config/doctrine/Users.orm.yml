@@ -1,0 +1,35 @@
+App\SiteBundle\Entity\User:
+    type: entity
+    table: user
+    indexes:
+        user_id_idx:
+            columns:
+                - user_id
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        userId:
+            type: bigint
+            column: user_id
+            options:
+                unsigned: true
+        gender:
+            type: boolean
+        birthday:
+            type: string
+            length: '16'
+        locationCountry:
+            type: string
+            length: 255
+            column: location_country
+        country:
+            type: string
+            length: 255
+        sessionId:
+            type: integer
+            column: session_id
+    lifecycleCallbacks: {  }
